@@ -1,0 +1,959 @@
+@font-face {
+    font-family: 'Roboto Thin';
+    src: url(fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Summer';
+    src: url(fonts/Summer\ Dream\ Sans\ DEMO\ .ttf);
+}
+
+@font-face {
+    font-family: 'Florensa';
+    src: url(fonts/Florensa-Demo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Thin', sans-serif;;
+}
+
+/* ---------------------- HERO ---------------------------- */
+
+.home {
+    width: 100%;
+    height: 100%;
+    background: url(img/howtocome/hero.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 100%;
+    background-image: url(img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: static;
+    background: none;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    font-size: 1.4rem;
+}
+
+.menu {
+    width: 40%;
+    height: 100%;
+    position: static;
+}
+
+.menu-btn {
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 15px;
+}
+
+.menu-btn-bars {
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+    transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+    background: transparent;
+    transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    display: block;
+}
+
+.title-div {
+    width: 100%;
+    height: 70vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    font-size: clamp(3rem, 2.3333rem + 2.2222vw, 5rem);
+    padding-bottom: 140px;
+    font-family: 'Summer';
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* ---------------------- ABOUT ---------------------------- */
+.about {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-title {
+    display: flex;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.about-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+}
+
+.about-information {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    padding-right: 50px;
+
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.about-img {
+    flex: 1;
+
+    background-image: url(img/howtocome/intro.jpg);
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------- AIRPORTS / PORTS ---------------------------- */
+.airports, .ports {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.airports-title, .ports-title {
+    display: flex;
+    width: 100%;
+    padding: 100px;
+}
+
+.airports-title p, .ports-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+    padding-bottom: 100px;
+}
+
+.airports-cards, .ports-cards {
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+
+    padding-bottom: 100px;
+}
+
+.airports-card1, .airports-card2, .ports-card1, .ports-card2 {
+    margin-right: 50px;
+}
+
+.airports-card1, .airports-card2, .airports-card3, .ports-card1, .ports-card2, .ports-card3 {
+    border: 1px solid rgba(0, 0, 0, .6);
+    margin-bottom: 30px;
+}
+
+.airports-card1-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/howtocome/osloairport.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.airports-card2-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/howtocome/bergenairport.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.airports-card3-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/howtocome/tromsoairport.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.airports-card-title p, .ports-card-title p {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.airports-card-text p, .ports-card-text p {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    font-family: 'Roboto Thin', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.airports-cards-button, .ports-cards-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.ports-cards-button {
+    width: 190px;
+}
+
+.airports-cards-button-text, .ports-cards-button-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto Thin', sans-serif;
+    text-decoration: none;
+}
+
+.ports-card1-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/howtocome/alesundport.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ports-card2-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/howtocome/batsfjordport.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ports-card3-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/howtocome/bergenport.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.airports-cards-button:hover, .ports-cards-button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.planes-routes, .ports-routes {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.planes-routes p, .ports-routes p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+    padding-bottom: 100px;
+}
+
+.planes-routes-img {
+    height: 1000px;
+    width: 100%;
+
+    background-image: url(img/howtocome/planesroutes.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ports-routes-img {
+    height: 1000px;
+    width: 100%;
+
+    background-image: url(img/howtocome/shipsroutes.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------- INTRO HOTELS ---------------------------- */
+.intro-hotels {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.intro-hotels-title {
+    display: flex;
+    width: 100%;
+}
+
+.intro-hotels-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+}
+
+.intro-hotels-information {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 50px;
+}
+
+.intro-hotels-text {
+    flex: 1;
+    text-align: justify;
+    padding-right: 50px;
+
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.intro-hotels-img {
+    flex: 1;
+
+    background-image: url(img/howtocome/stay.jpg);
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------- HOTELS ---------------------------- */
+.hotels {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.hotel {
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 100px;
+}
+
+.hotel1-img {
+    flex: 1;
+
+    background-image: url(img/howtocome/hotel1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hotel2-img {
+    flex: 1;
+
+    background-image: url(img/howtocome/hotel2.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hotel3-img {
+    flex: 1;
+
+    background-image: url(img/howtocome/hotel3.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hotel-text {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.hotel-title {
+    font-size: clamp(1.2rem, 0.9333rem + 0.8889vw, 2rem);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.hotel-location {
+    font-size: clamp(1rem, 0.8333rem + 0.5556vw, 1.5rem);
+    font-family: 'Roboto Thin', sans-serif;
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.hotel-description {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    font-family: 'Roboto Thin', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.hotel-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.hotel-price {
+    font-size: clamp(1.2rem, 1.1rem + 0.3333vw, 1.5rem);
+    font-family: 'Roboto Thin', sans-serif;
+    color: rgba(0, 0, 0, .8);
+}
+
+.hotel-price-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+    width: 250px;
+    height: 50px;
+    margin: 20px;
+
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.hotel-price-button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.hotel-price-button-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto Thin', sans-serif;
+    text-decoration: none;
+}
+
+/* ---------------------- FOOTER ---------------------------- */
+.footer {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    height: 500px;
+
+    margin-left: 0 auto;
+}
+
+.footer-logo {
+    padding: 10px;
+    width: 60%;
+    padding-top: 100px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer-learn, .footer-contact, .footer-partners {
+    padding: 10px;
+    width: 20%;
+    height: 300px;
+}
+
+.footer-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-family: 'Roboto Thin', sans-serif;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-text img {
+    height: 25px;
+    width: 35px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    width: 40%;
+}
+
+.rrss img {
+    margin-top: 10px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.footer-partners img {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-policy {
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+}
+
+.footer-copyright {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.footer-policies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.footer-policies p {
+
+    cursor: pointer;
+}
+
+.footer-copyright, .footer-policies {
+    flex: 1;
+}
+
+hr {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ---------------------- MEDIA QUERIES ---------------------------- */
+@media screen and (max-width: 1100px) {
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        justify-self: right;
+        height: 67.5vh;
+        list-style-type: none;
+        text-align: center;
+        background: rgba(0, 0, 0, .9);
+        transition: all .5s ease-in-out;
+        z-index: 9999;
+    }
+
+    .open {
+        width: 49vw;
+    }
+
+    .navbar li {
+        margin: 50px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
+
+    .about-title {
+        padding-top: 100px;
+    }
+
+    .about-img {
+        height: 700px;
+    }
+
+    .about-information {
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 100px;
+        height: 120vh;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .airports-cards, .ports-cards {
+        flex-flow: column wrap;
+    }
+
+    .airports-title, .ports-title {
+        padding-bottom: 0;
+    }
+
+    .airports-card1, .airports-card2, .ports-card1, .ports-card2 {
+        margin-right: 0;
+    }
+
+    .planes-routes, .ports-routes {
+        padding-bottom: 150px;
+    }
+
+    .intro-hotels-information {
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 100px;
+        height: 140vh;
+    }
+
+    .intro-hotels-text {
+        flex: 1;
+        padding-right: 0;
+    }
+
+    .intro-hotels-img {
+        flex: 3;
+    }
+
+    .hotel {
+        flex-flow: column wrap;
+    }
+
+    .hotel1-img, .hotel2-img, .hotel3-img {
+        height: 500px;
+        flex: none;
+    }
+
+    .footer-logo {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        width: 90%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .destinations-title, .parks-title {
+        padding-bottom: 0;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 30%;
+    }
+
+    .footer-policy {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-copyright, .footer-policies {
+        width: 90%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 785px) {
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-logo {
+        width: 82%;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home {
+        height: 100vh;
+    }
+
+    .about {
+        padding: 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        height: auto;
+    }
+
+    .about-title {
+        padding-top: 50px;
+    }
+
+    .about-information {
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .planes-routes, .ports-routes {
+        display: none;
+    }
+
+    .intro-hotels-text {
+        padding-bottom: 50px;
+    }
+
+    .footer-policy {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-copyright {
+        padding-top: 10px;
+        padding-left: 0;
+    }
+
+    .footer-policies {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}

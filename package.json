@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "glider-js": "^1.7.8",
+    "hover.css": "^2.3.2"
+  }
+}

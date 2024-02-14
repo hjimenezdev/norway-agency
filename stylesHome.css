@@ -1,0 +1,1140 @@
+@font-face {
+    font-family: 'Roboto Thin';
+    src: url(fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Summer';
+    src: url(fonts/Summer\ Dream\ Sans\ DEMO\ .ttf);
+}
+
+@font-face {
+    font-family: 'Florensa';
+    src: url(fonts/Florensa-Demo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Thin', sans-serif;;
+}
+
+/* ---------------------- HERO ---------------------------- */
+
+.home {
+    width: 100%;
+    height: 100%;
+    background: url(img/home/hero.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 100%;
+    background-image: url(img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: static;
+    background: none;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.navbar li a:hover {
+    color: #545350;
+    transition: all .3s ease-in-out;
+}
+
+.menu {
+    width: 40%;
+    height: 100%;
+    position: static;
+}
+
+.menu-btn {
+    box-sizing: border-box;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 15px;
+}
+
+.menu-btn-bars {
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+    transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+    background: transparent;
+    transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    display: block;
+}
+
+.title-div {
+    width: 100%;
+    height: 92vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    font-size: clamp(3rem, 1rem + 6.6667vw, 9rem);
+    padding-bottom: 250px;
+    font-family: 'Summer';
+    color: white;
+}
+
+.ubication-svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+
+.ubication {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Roboto Thin', sans-serif;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+
+}   
+
+/* ---------------------- ABOUT ---------------------------- */
+.about {
+    width: 100%;
+    height: auto;
+    padding: 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-title {
+    display: flex;
+    width: 100%;
+}
+
+.about-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+}
+
+.about-information {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    padding-right: 50px;
+
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    line-height: 1.5;
+}
+
+.about-img {
+    flex: 1;
+
+    background-image: url(img/home/welcome.jpg);
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------------------- BAND ---------------------------- */
+.band {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/lighthouse.jpg);
+    background-position: top top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.opacity {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+.svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.svg-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.svg-item img {
+    height: 65px;
+    margin-bottom: 30px;
+}
+
+.svg-text {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.svg-text span {
+    font-weight: 100;
+    font-size: 18px;
+}
+
+/* ---------------------- HISTORY ---------------------------- */
+.history {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.history-title {
+    display: flex;
+    width: 100%;
+    padding: 100px;
+}
+
+.history-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+    padding-bottom: 100px;
+}
+
+.history-center {
+    width: 50%;
+    padding-bottom: 100px;
+}
+
+.history-center-title, .history-puzzle-title {
+    font-size: clamp(1rem, 0.6667rem + 1.1111vw, 2rem);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.history-center-text, .history-puzzle-text {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    font-family: 'Roboto Thin', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.history-center-text {
+    padding-bottom: 50px;
+}
+
+.history-center-img {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/vikings.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-center-img2 {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/constitution.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-puzzle {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 100px;
+}
+
+.history-puzzle1, .history-puzzle2, .history-puzzle3, .history-puzzle4 {
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+}
+
+.history-puzzle-img1 {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/unification.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-puzzle-text, .history-puzzle-img1, .history-puzzle-img2, .history-puzzle-img3, .history-puzzle-img4 {
+    flex: 1;
+}
+
+.history-puzzle-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.history-puzzle-img2 {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/union.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-puzzle-text p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.history-puzzle-img3 {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/ww2.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-puzzle-img4 {
+    width: 100%;
+    height: 500px;
+    background-image: url(img/home/flag.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ---------------------- DESTINATIONS / PARKS ---------------------------- */
+.destinations, .parks {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.destinations-title, .parks-title {
+    display: flex;
+    width: 100%;
+    padding: 100px;
+}
+
+.destinations-title p, .parks-title p {
+    font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+    font-family: 'Florensa';
+    padding-bottom: 50px;
+}
+
+.destinations-cards, .parks-cards {
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+
+    padding-bottom: 200px;
+}
+
+.destinations-card1, .destinations-card2, .destinations-card3, .parks-card1, .parks-card2, .parks-card3 {
+    border: 1px solid rgba(0, 0, 0, .6);
+    margin: 15px;
+}
+
+.destinations-card1-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/home/oslo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.destinations-card2-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/home/bergen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.destinations-card3-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/home/alesund.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.destinations-card-title p, .parks-card-title p {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.destinations-card-text p, .parks-card-text p {
+    font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+    font-family: 'Roboto Thin', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.destinations-cards-button, .parks-cards-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.destinations-cards-button:hover, .parks-cards-button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.destinations-cards-button-text, .parks-cards-button-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto Thin', sans-serif;
+    text-decoration: none;
+}
+
+.parks-card1-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/home/jotunheimen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parks-card2-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/home/jostedalsbreen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parks-card3-photo {
+    height: 400px;
+    width: 100%;
+
+    background-image: url(img/home/folgefonna.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ---------------------- GALLERY ---------------------------- */
+.gallery {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.gallery-title {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-title p {
+    font-size: 3.5rem;
+    font-family: 'Florensa';
+    padding-bottom: 100px;
+}
+
+.gallery-photos {
+    width: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    transition: all .3s ease-in-out;
+}
+
+.gallery-item {
+    width: 32%;
+    min-width: 450px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 5px;
+}
+
+.gallery-photos1 {
+    background-image: url(img/home/gallery1.jpg);
+}
+
+.gallery-photos2 {
+    background-image: url(img/home/gallery2.jpg);
+}
+
+.gallery-photos3 {
+    background-image: url(img/home/gallery3.jpg);
+}
+
+.gallery-photos4 {
+    background-image: url(img/home/gallery4.jpg);
+}
+
+.gallery-photos5 {
+    background-image: url(img/home/gallery5.jpg);
+}
+
+.gallery-photos6 {
+    background-image: url(img/home/gallery6.jpg);
+}
+
+.gallery-photos7 {
+    background-image: url(img/home/gallery7.jpg);
+}
+
+.gallery-photos8 {
+    background-image: url(img/home/gallery8.jpg);
+}
+
+.gallery-photos9 {
+    background-image: url(img/home/gallery9.jpg);
+}
+
+.hvr-bounce-to-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.hvr-bounce-to-bottom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-bottom:hover,
+.hvr-bounce-to-bottom:focus,
+.hvr-bounce-to-bottom:active {
+    color: white;
+}
+
+.hvr-bounce-to-bottom:hover>h4,
+.hvr-bounce-to-bottom:focus>h4,
+.hvr-bounce-to-bottom:active>h4 {
+    visibility: visible;
+}
+
+.hvr-bounce-to-bottom:hover:before,
+.hvr-bounce-to-bottom:focus:before,
+.hvr-bounce-to-bottom:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.galleryback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryback h4 {
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin: 0;
+    visibility: hidden;
+}
+
+/* ---------------------- FOOTER ---------------------------- */
+.footer {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    height: 500px;
+
+    margin-left: 0 auto;
+}
+
+.footer-logo {
+    padding: 10px;
+    width: 60%;
+    padding-top: 100px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer-learn, .footer-contact, .footer-partners {
+    padding: 10px;
+    width: 20%;
+    height: 300px;
+}
+
+.footer-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-family: 'Roboto Thin', sans-serif;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-text img {
+    height: 25px;
+    width: 35px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    width: 40%;
+}
+
+.rrss img {
+    margin-top: 10px;
+    height: 25px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.footer-partners img {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-policy {
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+}
+
+.footer-copyright {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    padding-left: 50px;
+}
+
+.footer-policies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.footer-policies p {
+    font-size: clamp(0.8rem, 0.7333rem + 0.2222vw, 1rem);
+    cursor: pointer;
+}
+
+.footer-copyright, .footer-policies {
+    flex: 1;
+}
+
+hr {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ---------------------- MEDIA QUERIES ---------------------------- */
+@media screen and (max-width: 1100px) {
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        justify-self: right;
+        height: 89.5vh;
+        list-style-type: none;
+        text-align: center;
+        background: rgba(0, 0, 0, .9);
+        transition: all .5s ease-in-out;
+        z-index: 9999;
+    }
+
+    .open {
+        width: 49vw;
+    }
+
+    .navbar li {
+        margin: 50px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
+
+    .ubication {
+        display: none;
+    }
+
+    .about {
+        height: 200vh;
+    }
+
+    .about-title {
+        padding-top: 100px;
+    }
+
+    .about-img {
+        height: 700px;
+    }
+
+    .about-information {
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 100px;
+        height: 160vh;
+    }
+
+    .about-text {
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+
+    .band {
+        height: 400px;
+        background-position: center center;
+    }
+
+    .history-title p {
+        padding-bottom: 0;
+    }
+
+    .history-center {
+        width: 90%;
+    }
+
+    .history-puzzle1, .history-puzzle2, .history-puzzle3, .history-puzzle4 {
+        flex-flow: column wrap;
+        padding-bottom: 50px;
+    }
+
+    .destinations-cards, .parks-cards {
+        flex-flow: column wrap;
+    }
+
+    .destinations-title, .parks-title {
+        padding-bottom: 0;
+    }
+
+    .gallery-title {
+        padding-bottom: 0;
+    }
+
+    .footer-logo {
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        width: 90%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .destinations-title, .parks-title {
+        padding-bottom: 0;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 30%;
+    }
+
+    .footer-policy {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-copyright, .footer-policies {
+        width: 90%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .ubication {
+        display: none;
+    }
+
+    .about-title {
+        padding-top: 300px;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-logo {
+        width: 82%;
+    }
+
+    .footer-learn, .footer-contact, .footer-partners {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .rrss {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home {
+        height: 100vh;
+    }
+
+    .about {
+        padding: 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        height: auto;
+    }
+
+    .about-title {
+        padding-top: 50px;
+    }
+
+    .about-information {
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .band {
+        display: none;
+    }
+
+    .history {
+        padding: 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        height: auto;
+    }
+
+    .history-title {
+        justify-content: center;
+        align-items: center;
+        align-content: center; 
+    }
+
+    .history-center-title, .history-puzzle-title {
+        padding-bottom: 20px;
+    }
+
+    .history-puzzle {
+        padding-bottom: 50px;
+    }
+
+    .destinations-title p, .parks-title p {
+        padding-bottom: 10px;
+    }
+
+    .footer-policy {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-copyright {
+        padding-top: 10px;
+        padding-left: 0;
+    }
+
+    .footer-policies {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 10px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}

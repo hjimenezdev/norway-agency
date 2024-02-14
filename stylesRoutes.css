@@ -1,0 +1,892 @@
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url(fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Summer';
+  src: url(fonts/Summer\ Dream\ Sans\ DEMO\ .ttf);
+}
+
+@font-face {
+  font-family: 'Florensa';
+  src: url(fonts/Florensa-Demo.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Thin", sans-serif;
+}
+
+/* ---------------------- HERO ---------------------------- */
+
+.home {
+  width: 100%;
+  height: 100%;
+  background: url(img/routes/hero.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.header {
+  width: 90%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 100%;
+  background-image: url(img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: static;
+  background: none;
+  height: 100%;
+  width: 100%;
+  transition: none;
+  font-size: 1.4rem;
+}
+
+.menu {
+  width: 40%;
+  height: 100%;
+  position: static;
+}
+
+.menu-btn {
+  box-sizing: border-box;
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  margin-right: 15px;
+}
+
+.menu-btn-bars {
+  width: 45px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+  transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+  transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+  background: transparent;
+  transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+}
+
+.title-div {
+  width: 100%;
+  height: 70vh;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.title {
+  font-size: clamp(3rem, 2.3333rem + 2.2222vw, 5rem);
+  padding-bottom: 140px;
+  font-family: 'Summer';
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ---------------------- ABOUT ---------------------------- */
+
+.about {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.about-title {
+  display: flex;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.about-title p {
+  font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+  font-family: "Florensa";
+}
+
+.about-information {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+  padding-right: 50px;
+
+  font-size: clamp(1rem, 0.9333rem + 0.2222vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.about-img {
+  flex: 1;
+
+  background-image: url(img/routes/kayak.jpg);
+  height: 60%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------------------- ROUTES ---------------------------- */
+.routes {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.routes-title {
+  display: flex;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.routes-title p {
+  font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+  font-family: "Florensa";
+  padding-bottom: 100px;
+}
+
+.route-title {
+  margin: 50px;
+  font-size: clamp(1.5rem, 1.0667rem + 1.4444vw, 2.8rem);
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.glider-contain {
+  width: 100%;
+  height: 775px;
+}
+
+.glider {
+  width: 100%;
+  height: 775px;
+}
+
+.glider-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.glider-track {
+  height: 775px;
+}
+
+.glider-dots {
+  position: absolute;
+  width: 431px;
+  bottom: 105px;
+  left: 70px;
+}
+
+.glider-dots::before {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 5px;
+}
+
+.glider-dot::after {
+  content: attr("day");
+  display: block;
+  position: absolute;
+  top: 20px;
+}
+
+.route-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: calc(100% - 575px);
+  height: 100%;
+}
+
+.days {
+  position: absolute;
+  margin: auto;
+  color: white;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 55px;
+  left: 50px;
+  padding: 10px;
+}
+
+.days p:first-child {
+  margin: 0;
+  margin-right: 30px;
+}
+
+.days p:nth-child(6) {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.days p:nth-child(2),
+.days p:nth-child(3),
+.days p:nth-child(4),
+.days p:nth-child(5) {
+  margin: 0 20px;
+}
+
+.route-content {
+  width: 575px;
+  height: 100%;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.route-content h4 {
+  font-size: clamp(1.5rem, 1.0667rem + 1.4444vw, 2.8rem);
+  margin: 40px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.route-content h5 {
+  font-size: clamp(1rem, 0.6667rem + 1.1111vw, 2rem);
+  margin: 20px 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.route-content p {
+  width: 100%;
+  font-weight: 200;
+  font-size: clamp(0.8rem, 0.7333rem + 0.2222vw, 1rem);
+  letter-spacing: 1px;
+  line-height: 36px;
+  text-align: justify;
+}
+
+.route-1 {
+  background-image: url(img/routes/route1.jpg);
+}
+
+.route-2 {
+  background-image: url(img/routes/route2.jpg);
+}
+
+.route-3 {
+  background-image: url(img/routes/route3.jpg);
+}
+
+.route-4 {
+  background-image: url(img/routes/route4.jpg);
+}
+
+.route-5 {
+  background-image: url(img/routes/route5.jpg);
+}
+
+.route-6 {
+  background-image: url(img/routes/route6.jpg);
+}
+
+.route-7 {
+  background-image: url(img/routes/route7.jpg);
+}
+
+.route-8 {
+  background-image: url(img/routes/route8.jpg);
+}
+
+.route-9 {
+  background-image: url(img/routes/route9.jpg);
+}
+
+.route-10 {
+  background-image: url(img/routes/route10.jpg);
+}
+
+.route-11 {
+  background-image: url(img/routes/route11.jpg);
+}
+
+.route-12 {
+  background-image: url(img/routes/route12.jpg);
+}
+
+.route-13 {
+  background-image: url(img/routes/route13.jpg);
+}
+
+.route-14 {
+  background-image: url(img/routes/route14.jpg);
+}
+
+.route-15 {
+  background-image: url(img/routes/route15.jpg);
+}
+
+.route-16 {
+  background-image: url(img/routes/route16.jpg);
+}
+
+.route-17 {
+  background-image: url(img/routes/route17.jpg);
+}
+
+.route-18 {
+  background-image: url(img/routes/route18.jpg);
+}
+
+/* ---------------------- IMG ---------------------------- */
+.img-div {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.img-title {
+  display: flex;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.img-title p {
+  font-size: clamp(2rem, 1.5rem + 1.6667vw, 3.5rem);
+  padding: 100px;
+  font-family: "Florensa";
+}
+
+.img {
+  width: 100%;
+  height: 1000px;
+
+  background-image: url(img/routes/kvaloya.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-bottom: 100px;
+}
+
+/* ---------------------- FOOTER ---------------------------- */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 500px;
+
+  margin-left: 0 auto;
+}
+
+.footer-logo {
+  padding: 10px;
+  width: 60%;
+  padding-top: 100px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.footer-learn,
+.footer-contact,
+.footer-partners {
+  padding: 10px;
+  width: 20%;
+  height: 300px;
+}
+
+.footer-subtitle {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 25px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  font-family: "Roboto Thin", sans-serif;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-text img {
+  height: 25px;
+  width: 35px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+.rrss {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  height: 30px;
+  width: 40%;
+}
+
+.rrss img {
+  margin-top: 10px;
+  height: 25px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.footer-partners img {
+  height: 100px;
+  width: auto;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.footer-policy {
+  color: white;
+  background-color: black;
+  height: 100px;
+  width: 100%;
+
+  display: flex;
+}
+
+.footer-copyright {
+  display: flex;
+
+  align-items: center;
+  align-content: center;
+  padding-left: 50px;
+}
+
+.footer-policies {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  padding-right: 50px;
+}
+
+.footer-policies p {
+  cursor: pointer;
+}
+
+.footer-copyright,
+.footer-policies {
+  flex: 1;
+}
+
+hr {
+  width: 2px;
+  height: 30px;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ---------------------- MEDIA QUERIES ---------------------------- */
+@media screen and (max-width: 1100px) {
+  .header {
+      width: 100%;
+  }
+
+  .logo {
+      margin-left: 30px;
+  }
+
+  .menu {
+      position: relative;
+  }
+
+  .menu-btn {
+      display: flex;
+  }
+
+  .navbar {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0px;
+      left: auto;
+      margin: 0;
+      padding: 0;
+      width: 0;
+      justify-self: right;
+      height: 67.5vh;
+      list-style-type: none;
+      text-align: center;
+      background: rgba(0, 0, 0, .9);
+      transition: all .5s ease-in-out;
+      z-index: 9999;
+  }
+
+  .open {
+      width: 49vw;
+  }
+
+  .navbar li {
+      margin: 50px 0;
+  }
+
+  .navbar a {
+      text-decoration: none;
+      color: white;
+      display: none;
+  }
+
+  .about-title {
+      padding-top: 100px;
+  }
+
+  .about-img {
+      height: 700px;
+  }
+
+  .about-information {
+      display: flex;
+      flex-flow: column wrap;
+      padding-top: 100px;
+      height: 120vh;
+  }
+
+  .about-text {
+      padding-right: 0;
+  }
+
+  .routes-title {
+      padding-bottom: 0;
+  }
+
+  .glider-contain,
+    .glider,
+    .glider-track {
+        height: auto;
+        padding: 0;
+    }
+
+    .route-title {
+        font-size: 36px;
+    }
+
+    .glider-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .route-img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .route-content {
+        width: 100%;
+        order: 2;
+        height: 50%;
+    }
+
+    .route-content h4 {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .route-content h5 {
+        text-align: center;
+    }
+
+    .days {
+        display: none;
+    }
+
+    .glider-dots {
+        width: 0;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .arrow-left {
+        background-image: url(img/routes/arrow-left.png);
+    }
+
+    .arrow-right {
+        background-image: url(img/routes/arrow-right.png);
+    }
+
+    .prev-1,
+    .prev-2,
+    .prev-3 {
+        position: absolute;
+        top: 550px;
+        left: 40px;
+    }
+
+    .next-1,
+    .next-2,
+    .next-3 {
+        position: absolute;
+        top: 550px;
+        right: 40px;
+    }
+
+  .footer-logo {
+      width: 90%;
+      padding-top: 30px;
+  }
+
+  .footer-content {
+      width: 90%;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 30px;
+  }
+
+  .rrss {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-learn, .footer-contact, .footer-partners {
+      width: 30%;
+  }
+
+  .footer-policy {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+
+  .footer-copyright, .footer-policies {
+      width: 90%;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+  }
+}
+
+@media screen and (max-width: 785px) {
+
+  .footer {
+      height: auto;
+  }
+
+  .footer-content {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+  }
+
+  .footer-logo {
+      width: 82%;
+  }
+
+  .footer-learn, .footer-contact, .footer-partners {
+      width: 90%;
+      padding-bottom: 30px;
+  }
+
+  .rrss {
+      width: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+      height: 100vh;
+  }
+
+  .about {
+      padding: 0;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      height: auto;
+  }
+
+  .about-title {
+      padding-top: 50px;
+  }
+
+  .about-information {
+      height: auto;
+      padding-top: 50px;
+  }
+
+  .glider-contain {
+      padding-bottom: 100px;
+  }
+
+  .img-div {
+    display: none;
+  }
+
+  .footer-policy {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+  }
+
+  .footer-copyright {
+      padding-top: 10px;
+      padding-left: 0;
+  }
+
+  .footer-policies {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+  }
+}
